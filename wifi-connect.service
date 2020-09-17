@@ -5,7 +5,7 @@ After=multi-user.target
 
 [Service]
 Type=idle
-ExecStart=/bin/bash /home/pi/wifi-connect/wifi-connect.py
+ExecStart=/bin/bash /home/pi/wifi-connect-setup/start-wifi-connect.sh
 
 [Install]
 WantedBy=multi-user.target

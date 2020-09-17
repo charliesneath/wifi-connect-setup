@@ -10,9 +10,12 @@ echo "nm-online exit code: ${NETWORK_STATUS}"
 
 if (( $NETWORK_STATUS > 0 ))
 then
-  echo "No internet connect, starting wifi-connect to create access point..."
-  cd /home/pi/wifi-connect/
-  sudo wifi-connect --portal-ssid "rpi-admin"
+  echo "No internet connection."
+  echo "Starting wifi-connect to create wifi access point..."
+  cd /home/pi/wifi-connect-setup
+  sudo wifi-connect \
+       --portal-ssid "rpi-admin" \
+       --portal-passphrase "meteorology"
 fi
 
 echo "Internet connection established"
