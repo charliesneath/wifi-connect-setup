@@ -1,0 +1,11 @@
+[Unit]
+Description=wifi-connect startup script
+After=time-sync.target
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/bin/bash /home/pi/wifi-connect/wifi-connect.py
+
+[Install]
+WantedBy=multi-user.target
